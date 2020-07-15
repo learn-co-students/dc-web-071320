@@ -1,0 +1,35 @@
+Generating this week's newsletter...
+
+SUBJECT: Flatiron DC Newsletter - Nov 20, 2019
+
+RECIPIENTS: 
+BODY:
+Flatiron DC Newsletter - Nov 20, 2019
+
+
+[1mFrom:[0m /Users/paul.nicholsen/Development/code/flatiron/batches/dc-web-071320/02-newsletter/newsletter.rb:66 Object#print_many_articles:
+
+    [1;34m63[0m: [32mdef[0m [1;34mprint_many_articles[0m(articles)
+    [1;34m64[0m:   [1;34m# Write a method that will take in an array of article hashes[0m
+    [1;34m65[0m:   [1;34m# and format each one using the print_one_article method[0m
+ => [1;34m66[0m:   binding.pry
+    [1;34m67[0m:   articles.each [32mdo[0m |article|
+    [1;34m68[0m:     print_one_article(article)
+    [1;34m69[0m:   [32mend[0m
+    [1;34m70[0m: [32mend[0m
+
+[0G[1] pry(main)> 
+[1] pry(main)> 
+[1] pry(main)> 
+[1] pry(main)> 
+[1] pry(main)> 
+[1] pry(main)> 
+[1] pry(main)> 
+[1] pry(main)> 
+[1] pry(main)> 
+[1] pry(main)> ex
+NameError: undefined local variable or method `ex' for main:Object
+from (pry):1:in `print_many_articles'
+[2] pry(main)> tjhju[K[2] pry(main)> tjhju
+[2] pry(main)> 
+[2] pry(main)> cqq\    
