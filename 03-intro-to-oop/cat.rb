@@ -66,10 +66,16 @@ class Cat
 
     # write a method that takes in the name of a cat and returns 
     # the first cat with that name
-
+    def self.find_by_name(name)
+        return Cat.all.find {|cat| cat.name == name}
+    end
 
     # write a method that takes in a color of a cat and returns an array
     # of all cats that are that color
+
+    def self.find_all_by_color(color)
+        return Cat.all.select {|cat| cat.color == color}
+    end
 
     # def name=(new_name)
     #     @name = new_name

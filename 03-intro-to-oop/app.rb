@@ -28,5 +28,7 @@ heathcliff = Cat.new("Heathcliff", "orange", 2)
 
 # puts Cat.is_warm_blooded?
 
+petey =  Cat.find_by_name("Petey")
+puts petey
 # [<Cat name=Petey>, <Cat name="Ella"]
 
