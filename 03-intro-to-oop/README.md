@@ -10,3 +10,6 @@
 * Define attribute readers and writers using `attr_` macros
 * Explain the need for variable scope and why it's important to not utilize global variables
 
+local_variables (no @):  Only available in the method it was defined in
+instance variables (@): Available everywhere within the instance of that class
+class variable (@@):  Defined with relation to the whole class, not an instance
