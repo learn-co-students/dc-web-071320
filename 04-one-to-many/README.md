@@ -11,12 +11,16 @@
 
 ## Deliverables
 
-* Create a User class. The class should have these methods:
-  * `#initialize` which takes a username and have a reader method for the username
-  * `#tweets` that returns an array of Tweet instances
-  * `#post_tweet` that takes a message, creates a new tweet, and adds it to the user's tweet collection
-* Create a Tweet class. The class should have these methods:
-  * `Tweet#message` that returns a string
-  * `Tweet#user` that returns an instance of the user class
-  * `Tweet.all` that returns all the Tweets created.
-  * `Tweet#username` that returns the username of the tweet's user
+* Create a `School` class. The class should have these methods:
+  * `School#initialize` which takes a name
+  * `School#name` which returns the name of the School as a string
+  * `School#students` that returns an array of Student instances
+  * `School#roster` that returns an array of strings of Students' names
+  * `School#enroll_student` that takes a Student and adds them to the roster
+
+* Create a `Student` class. The class should have these methods:
+  * `Student#name` that returns a string
+  * `Student#school` that returns an instance of the user class
+  * `Student#school_name` that returns the name of the School as a string
+  * `Student.all` that returns all the Students created.
+  * `Student.find_by_name` which takes a string and returns the first student whose name matches (Bonus:  Make it case insensitive)
