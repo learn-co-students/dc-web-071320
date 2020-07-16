@@ -9,28 +9,25 @@
 class Puppy
 
     attr_reader :name, :cuteness
+    # attr_writer :cuteness
 
     def initialize(name)
         @name = name
         @cuteness = 5
     end
 
+    def cuteness=(new_cuteness)
+        @cuteness = new_cuteness.clamp(1, 10)
+    end
+
+
     def play_in_the_mud
-        @cuteness -= 5
-        if @cuteness > 10
-            @cuteness = 10
-        elsif @cuteness < 1
-            @cuteness = 1
-        end
+        self.cuteness -= 5
     end
 
     def take_a_bath
-        @cuteness += 3 
-        if @cuteness > 10
-            @cuteness = 10
-        elsif @cuteness < 1
-            @cuteness = 1
-        end
+        self.cuteness += 3
+        # self.cuteness = self.cuteness + 3 
     end    
 end
 
