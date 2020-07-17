@@ -12,6 +12,7 @@ class Restaurant
         self.meals << meal
         meal.restaurants << self
     end
+end
 
 class Meal
 
