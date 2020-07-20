@@ -11,3 +11,12 @@
 - superclass
 - Method Resolution Order (MRO)
 - private/public methods
+
+# Questions so far
+- does the order of the methods within a class matter?
+- when do you use modules over a parent/child relationship?
+- prepend and extend and include
+- how do classes "talk" to each other? 
+- self in general is still confusing!
+- difference between object and hash
+- 
