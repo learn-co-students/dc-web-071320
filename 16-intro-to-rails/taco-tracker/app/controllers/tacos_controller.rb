@@ -10,4 +10,8 @@ class TacosController < ApplicationController
         render :about
     end
 
+    def cats
+        @cat_facts = ["They're fluffy", "They're snuggly", "They're adorable"]
+        render :cats
+    end
 end
