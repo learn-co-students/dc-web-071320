@@ -1,0 +1,11 @@
+<h1>This is a great app</h1>
+
+<h2>Great things about tacos: </h2>
+
+<ul>
+    <% @taco_facts.each do |fact| %>
+        <li><%= fact %></li>
+    <% end %>
+</ul>
+
+<%= link_to "Back to Home", home_path %>
