@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   
   # get "/tacos/:id", to: "tacos#show", as: "something"
   resources :tacos
+  resources :restaurants, only: [:index, :show]
 
 
 

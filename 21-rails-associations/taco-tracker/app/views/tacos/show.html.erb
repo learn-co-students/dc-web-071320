@@ -5,4 +5,5 @@
 <h3>Price: $<%= @taco.price %></h3>
 <h3>Vegetarian? <%= @taco.vegetarian %></h3>
 
+<div><%= link_to "Edit This Taco", edit_taco_path(@taco.id) %>
 <div><%= link_to("Delete This Taco", taco_path(@taco.id), {method: :delete}) %></div>

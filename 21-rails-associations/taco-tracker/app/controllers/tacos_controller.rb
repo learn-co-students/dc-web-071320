@@ -28,8 +28,8 @@ class TacosController < ApplicationController
         # name = params["taco"]["name"]
         # price = params["taco"]["price"]
         # veg = params["taco"]["vegetarian"]
-        taco = Taco.create(taco_params)
-        redirect_to taco_path(taco)
+        @taco = Taco.create(taco_params)
+        redirect_to taco_path(taco)   # www.myapp.com/tacos/27
     end
 
     def edit
