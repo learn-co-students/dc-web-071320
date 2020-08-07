@@ -28,7 +28,7 @@ class TacosController < ApplicationController
         # name = params["taco"]["name"]
         # price = params["taco"]["price"]
         # veg = params["taco"]["vegetarian"]
-        @taco = Taco.create(taco_params)
+        taco = Taco.create(taco_params)
         redirect_to taco_path(taco)   # www.myapp.com/tacos/27
     end
 
@@ -66,7 +66,7 @@ class TacosController < ApplicationController
     end
 
     def taco_params
-        params.require(:taco).permit(:name, :price, :vegetarian)
+        params.require(:taco).permit(:name, :price, :vegetarian, :restaurant_id)
     end
 end
 

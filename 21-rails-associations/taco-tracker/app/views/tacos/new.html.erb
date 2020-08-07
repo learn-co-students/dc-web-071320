@@ -8,5 +8,7 @@
     <%= f.number_field :price, min: 0, step: 0.10 %>
     <%= f.label :vegetarian %>
     <%= f.select :vegetarian, [true, false] %>
+    <%= f.label :restaurant %>
+    <%= f.collection_select(:restaurant_id, Restaurant.all, :id, :name, {include_blank: "Choose a Restaurant"}) %>
     <%= f.submit "Make a New Taco" %>
 <% end %>
