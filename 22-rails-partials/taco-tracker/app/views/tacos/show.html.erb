@@ -1,0 +1,9 @@
+<h1>Detail Page</h1>
+
+<h2>Name: <%= @taco.display_name %></h2>
+<h4>Sold at: <%= link_to @taco.restaurant.name, restaurant_path(@taco.restaurant) %></h4>
+<h3>Price: $<%= @taco.price %></h3>
+<h3>Vegetarian? <%= @taco.vegetarian %></h3>
+
+<div><%= link_to "Edit This Taco", edit_taco_path(@taco.id) %>
+<div><%= link_to("Delete This Taco", taco_path(@taco.id), {method: :delete}) %></div>
