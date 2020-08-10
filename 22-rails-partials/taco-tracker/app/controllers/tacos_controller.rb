@@ -5,10 +5,13 @@ class TacosController < ApplicationController
 
     def index
         if params[:vegetarian] == "true"
+            @title_text = "Vegetarian Tacos"
             @tacos = Taco.vegetarian
         elsif params[:vegetarian] == "false" 
+            @title_text = "Meat Tacos"
             @tacos = Taco.meat
         else
+            @title_text = "All Tacos"
             @tacos = Taco.all
         end
         render :index
@@ -33,6 +36,7 @@ class TacosController < ApplicationController
     end
 
     def edit
+        # @restaurants = Restaurant.all
     end
 
     def update
@@ -66,7 +70,7 @@ class TacosController < ApplicationController
     end
 
     def taco_params
-        params.require(:taco).permit(:name, :price, :vegetarian, :restaurant_id)
+        params.require(:taco).permit(:name, :price, :vegetarian, :restaurant_id, :ingredient_ids => [])
     end
 end
 

@@ -1,14 +1,3 @@
 <h1>Create a new taco</h1>
 
-<%= form_for @taco do |f| %>
-
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :price %>
-    <%= f.number_field :price, min: 0, step: 0.10 %>
-    <%= f.label :vegetarian %>
-    <%= f.select :vegetarian, [true, false] %>
-    <%= f.label :restaurant %>
-    <%= f.collection_select(:restaurant_id, Restaurant.all, :id, :name, {include_blank: "Choose a Restaurant"}) %>
-    <%= f.submit "Make a New Taco" %>
-<% end %>
+<%= render partial: "taco_form", locals: {submit_text: "Make a New Taco"} %>

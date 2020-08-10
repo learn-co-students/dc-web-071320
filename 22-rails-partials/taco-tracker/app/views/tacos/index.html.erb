@@ -1,19 +1,5 @@
-<h1>Taco Index Page</h1>
+<h1><%= @title_text %></h1>
 
-<!--
-<form action="/tacos" method="GET">
-    <input type="radio" id="vegetarian" name="vegetarian" value="true">
-    <label for="vegetarian">Vegetarian only</label>
-    <input type="radio" id="meat" name="vegetarian" value="false">
-    <label for="meat">Meat only</label>
-    <input type="radio" id="all" name="vegetarian" value="all">
-    <label for="all">All Tacos</label>
-    <input type="submit">
-</form>
--->
-
-<!-- Challenge: Make sure the radio button reflects what page you're on once
-it's been selected --> 
 
 <%= form_tag tacos_path, method: :get do %>
     <%= radio_button_tag("vegetarian", "true", checked=(params[:vegetarian] == "true")) %>
