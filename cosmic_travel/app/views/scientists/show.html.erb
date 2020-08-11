@@ -1,0 +1,13 @@
+<h1>Scientists#show</h1>
+<p>Find me in app/views/scientists/show.html.erb</p>
+
+<div><%= @scientist.name %></div>
+
+<h3>Planets</h3>
+<div>
+    <% @scientist.planets.each do |planet| %>
+        <div><%= planet.name %></div>
+    <% end %>
+</div>
+
+<div><%= link_to "Delete This Scientist", scientist_path(@scientist), method: "delete" %></div>
