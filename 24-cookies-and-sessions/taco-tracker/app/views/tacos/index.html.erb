@@ -1,0 +1,29 @@
+<h1><%= @title_text %></h1>
+
+
+<%= form_tag tacos_path, method: :get do %>
+    <%= radio_button_tag("vegetarian", "true", checked=(params[:vegetarian] == "true")) %>
+    <%= label_tag "vegetarian_true", "Vegetarian"%>
+    <%= radio_button_tag "vegetarian", "false", checked=(params[:vegetarian] == "false") %>
+    <%= label_tag "vegetarian_false", "Meat" %>
+    <%= radio_button_tag "vegetarian", "all", checked=(params[:vegetarian]=="all" || params[:vegetarian].nil?) %>
+    <%= label_tag "vegetarian_all", "All" %>
+    <%= submit_tag "Get Tacos" %>
+<% end %>
+
+<%= link_to "Create A New Taco", new_taco_path %>
+<ul>
+    <% @tacos.each do |taco| %>
+        <li>
+            <%= link_to taco.display_name, taco_path(taco.id) %> 
+            <% if taco.vegetarian? %>
+                <span> - Vegetarian</span>
+            <% end %>
+        </li>
+        
+    <% end %>
+</ul>
+
+
+<div><%= link_to("Delete The First Taco", taco_path(Taco.first.id), {method: :delete}) %></div>
+<div><%= link_to("Delete The Last Taco", hate_path(Taco.last.id), {method: :delete}) %></div>
