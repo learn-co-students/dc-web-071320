@@ -18,6 +18,9 @@ class TacosController < ApplicationController
     end
 
     def show
+        cookies["favorite_taco"] = "Bacon Taco"
+        cookies["last_visited"] = @taco.name
+        session["secret_favorite"] = "Chicken Taco"
         render(:show)
     end
 

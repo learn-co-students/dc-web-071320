@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get "/", to: "static#home", as: "home"
   get("/about_us", {to: "static#about", as: "about"})
   get "/kitties", to: "static#cats", as: "cats"
+  get '/login', to: "sessions#login"
+  post "/login", to: "sessions#process_login"
+  delete "/logout", to: "sessions#logout"
 
 
   # get "/tacos/new", to: "tacos#new"
