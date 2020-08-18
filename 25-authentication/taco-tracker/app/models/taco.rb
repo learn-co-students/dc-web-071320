@@ -14,6 +14,10 @@ class Taco < ApplicationRecord
         return self.name.titlecase
     end
 
+    def slug_name
+        return self.name.parameterize
+    end
+
     def self.vegetarian
         return Taco.where(vegetarian: true)
     end

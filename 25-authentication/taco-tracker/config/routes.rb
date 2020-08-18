@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/", to: "static#home", as: "home"
   get("/about_us", {to: "static#about", as: "about"})
@@ -16,9 +17,13 @@ Rails.application.routes.draw do
   # get "/my_great_taco/:id", to: "tacos#show", as: "taco"
   resources :tacos
   resources :restaurants, only: [:index, :show, :new, :create]
+  resources :users, only: [:new, :create]
+
+  get "/tacos/:taco_name/:id", to: "tacos#show", as: "named_taco_path"
 
   delete "/ihatetacos/:id", to: "tacos#destroy", as: "hate"
   get "/taco_delete", to: "tacos#delete_taco"
   post "/taco_delete", to: "tacos#murder_taco"
+  
 
 end
