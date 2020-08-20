@@ -8,6 +8,9 @@ class Taco < ApplicationRecord
     has_many :taco_ingredients
     has_many :ingredients, through: :taco_ingredients
 
+    has_many :favorites
+    has_many :users, through: :favorites
+
     belongs_to :restaurant, optional: true
     
     def display_name

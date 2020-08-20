@@ -1,0 +1,9 @@
+<h1>Favorites#new</h1>
+
+<%= form_tag favorites_path do %>
+    <%= collection_check_boxes(:user, :taco_ids, Taco.all, :id, :name) %>
+    <%= submit_tag %>
+<% end %>
+
+
+

@@ -1,0 +1,6 @@
+
+<%= form_tag "/taco_delete" do %>
+    <%= label :taco_to_delete, "Delete Me" %>
+    <%= select_tag :taco_id, options_from_collection_for_select(Taco.all, :id, :name)  %>
+    <%= submit_tag  %>
+<% end %>

@@ -1,0 +1,13 @@
+<h2><%= @restaurant.name %></h2>
+<div><%= @restaurant.address %></div>
+
+
+<% if !@restaurant.tacos.empty? %>
+    <div>Tacos</div>
+
+    <ul>
+        <% @restaurant.tacos.each do |taco| %>
+            <li><%= link_to taco.name, taco_path(taco) %></li>
+        <% end %>
+    </ul>
+<% end %>
