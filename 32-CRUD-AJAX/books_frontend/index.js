@@ -1,4 +1,3 @@
-
 // Append single book on DOM
 function addBook(book){
   
