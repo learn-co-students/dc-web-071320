@@ -1,11 +1,18 @@
 {
+  "cars": [
+    {
+      "id": 1,
+      "model": "Toyota",
+      "year": 2020
+    }
+  ],
   "books": [
     {
       "id": 3,
       "title": "White Teeth",
       "author": "Zadie Smith",
       "img": "https://images-na.ssl-images-amazon.com/images/I/412BMH3wiIL._SX322_BO1,204,203,200_.jpg",
-      "read": true
+      "read": false
     },
     {
       "id": 4,
@@ -34,27 +41,6 @@
       "img": "https://images-na.ssl-images-amazon.com/images/I/41SKsBaGXRL._SX301_BO1,204,203,200_.jpg",
       "title": "I Know Why the Caged Bird Sings",
       "read": false
-    },
-    {
-      "id": 8,
-      "author": "Toni Morrison ",
-      "img": "https://images-na.ssl-images-amazon.com/images/I/413-xT0izBL._SX322_BO1,204,203,200_.jpg",
-      "title": "The Bluest Eye",
-      "read": false
-    },
-    {
-      "title": "Harry Potter",
-      "author": "unknown",
-      "img": "https://knowledgequest.aasl.org/wp-content/uploads/2015/01/books.png",
-      "read": false,
-      "id": 9
-    },
-    {
-      "title": "Story book",
-      "author": "unknown",
-      "img": "https://nice-assets.s3-accelerate.amazonaws.com/smart_templates/e639b9513adc63d37ee4f577433b787b/assets/wn5u193mcjesm2ycxacaltq8jdu68kmu.jpg",
-      "read": true,
-      "id": 10
     }
   ]
 }
