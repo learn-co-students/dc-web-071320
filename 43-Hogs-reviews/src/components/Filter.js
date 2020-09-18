@@ -10,6 +10,7 @@ class Filter extends React.Component {
           <option value="name">Sort by Name</option>
           <option value="weight">Sort by Weight</option>
         </select>
+        <button onClick={() => this.props.showAllHogs()} > Show all hogs </button>
       </div>
     );
   }

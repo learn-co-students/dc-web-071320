@@ -10,8 +10,8 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      hogs: hogs.map(hog => {return {...hog, clicked: false}}),
-      displayHogs: hogs.map(hog => {return {...hog, clicked: false}})
+      hogs: hogs.map(hog => {return {...hog, clicked: false, hidden: false}}),
+      // displayHogs: hogs.map(hog => {return {...hog, clicked: false}})
       // hogs
     }
   }
@@ -81,16 +81,31 @@ class App extends Component {
 
   }
 
+  hideHog = (clickedHog) => {
+    this.setState({
+      hogs: this.state.hogs.map(hog => hog === clickedHog ? {...hog, hidden: true} : hog )
+    })
+  }
+
+  showAllHogs = () => {
+    this.setState({
+      hogs: this.state.hogs.map(hog => { return{...hog, hidden: false} })
+    })
+  }
+
 
   render() {
     return (
       <div className="App">
         <Nav />
-        <Filter filterHogs={this.filterHogs} />
+        <Filter 
+        filterHogs={this.filterHogs}
+        showAllHogs={this.showAllHogs} />
         <HogContainer 
         // hogs={this.state.displayHogs}
         hogs={this.state.hogs}
-        showHog={this.showHog} />
+        showHog={this.showHog}
+        hideHog={this.hideHog} />
       </div>
     );
   }

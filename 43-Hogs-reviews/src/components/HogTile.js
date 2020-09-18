@@ -7,14 +7,15 @@ const HogTile = (props) => {
 
     // console.log(imgTitle)
     return(
-    <div onClick={() => props.showHog(props.hog)}>
-        <img src={require(`../hog-imgs/${imgTitle}.jpg`)} />
+    <div>
+        <img src={require(`../hog-imgs/${imgTitle}.jpg`)} onClick={() => props.showHog(props.hog)} />
         <h3>{props.hog.name}</h3>
 
         { props.hog.clicked
-        ? <HogDetails {...props.hog} hog={props.hog} />
+        ? <HogDetails {...props.hog} hog={props.hog} hideHog={props.hideHog} />
         : null }
         
+        <button onClick={() => props.hideHog(props.hog)}>Hide the Hog</button>
     </div>)
 }
 
