@@ -38,7 +38,7 @@ class App extends Component {
 
     let pizza = this.state.editPizza
 
-    let method = {
+    let request = {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ class App extends Component {
       body: JSON.stringify( pizza )
     }
 
-    fetch( pizzasUrl + pizza.id, method )
+    fetch( pizzasUrl + pizza.id, request )
     .then( res => res.json() )
     .then( updatedPizza => { 
       let pizzas = this.state.pizzas.map( pizza => { 
